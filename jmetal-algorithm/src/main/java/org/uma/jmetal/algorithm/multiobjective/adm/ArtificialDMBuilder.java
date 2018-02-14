@@ -13,7 +13,7 @@ import org.uma.jmetal.util.JMetalException;
 public class ArtificialDMBuilder<S extends Solution<?>> implements AlgorithmBuilder<ArtificialDM<S>> {
 
   /**
-   * NSGAIIBuilder class
+   * Artificial Decsion Maaker
    */
   private final Problem<S> problem;
   private int maxEvaluations;
@@ -25,7 +25,7 @@ public class ArtificialDMBuilder<S extends Solution<?>> implements AlgorithmBuil
   private List<Double> asp;
 
   /**
-   * ARPBuilder constructor
+   * ArtificialDMBuilder constructor
    */
   public ArtificialDMBuilder(Problem<S> problem, InteractiveAlgorithm<S,List<S>> algorithm) {
     this.problem = problem;

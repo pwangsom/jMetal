@@ -1,10 +1,6 @@
 package org.uma.jmetal.algorithm.multiobjective.adm;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,7 +8,6 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import org.uma.jmetal.algorithm.InteractiveAlgorithm;
-import org.uma.jmetal.algorithm.multiobjective.mombi.util.ASFWASFGA;
 import org.uma.jmetal.problem.Problem;
 import org.uma.jmetal.problem.impl.AbstractDoubleProblem;
 import org.uma.jmetal.problem.impl.AbstractIntegerDoubleProblem;
@@ -21,14 +16,18 @@ import org.uma.jmetal.solution.DoubleSolution;
 import org.uma.jmetal.solution.Solution;
 import org.uma.jmetal.util.comparator.ObjectiveComparator;
 import org.uma.jmetal.util.distance.impl.EuclideanDistanceBetweenSolutionsInObjectiveSpace;
-import org.uma.jmetal.util.point.Point;
-import org.uma.jmetal.util.point.impl.ArrayPoint;
-import org.uma.jmetal.util.point.util.distance.EuclideanDistance;
 import org.uma.jmetal.util.pseudorandom.JMetalRandom;
 import org.uma.jmetal.util.referencePoint.ReferencePoint;
 import org.uma.jmetal.util.referencePoint.impl.IdealPoint;
 import org.uma.jmetal.util.referencePoint.impl.NadirPoint;
 
+/**
+ * Class implementing the
+ * Towards automatic testing of reference point based interactive methods described in:
+ * Ojalehto, V., Podkopaev, D., & Miettinen, K. (2016, September).
+ * Towards automatic testing of reference point based interactive methods.
+ * In International Conference on Parallel Problem Solving from Nature (pp. 483-492). Springer, Cham.
+ */
 public class ArtificialDM<S extends Solution<?>> extends ArtificialDecisionMaker<S,List<S>> {
 
   protected IdealPoint idealOjectiveVector = null;
