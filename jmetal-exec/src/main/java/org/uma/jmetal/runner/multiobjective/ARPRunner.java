@@ -15,8 +15,8 @@ package org.uma.jmetal.runner.multiobjective;
 
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.InteractiveAlgorithm;
-import org.uma.jmetal.algorithm.multiobjective.arp.ARP;
-import org.uma.jmetal.algorithm.multiobjective.arp.ARPBuilder;
+import org.uma.jmetal.algorithm.multiobjective.adm.ARP;
+import org.uma.jmetal.algorithm.multiobjective.adm.ARPBuilder;
 import org.uma.jmetal.algorithm.multiobjective.rnsgaii.RNSGAIIBuilder;
 import org.uma.jmetal.algorithm.multiobjective.wasfga.WASFGA;
 import org.uma.jmetal.operator.CrossoverOperator;

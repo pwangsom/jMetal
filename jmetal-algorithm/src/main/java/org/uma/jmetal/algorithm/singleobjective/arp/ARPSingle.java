@@ -7,14 +7,13 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import org.uma.jmetal.algorithm.InteractiveAlgorithm;
-import org.uma.jmetal.algorithm.multiobjective.arp.AutomaticReferencePoint;
-import org.uma.jmetal.algorithm.multiobjective.arp.DecisionTreeEstimator;
+import org.uma.jmetal.algorithm.multiobjective.adm.ArtificialDecisionMaker;
+import org.uma.jmetal.algorithm.multiobjective.adm.DecisionTreeEstimator;
 import org.uma.jmetal.problem.Problem;
 import org.uma.jmetal.problem.impl.AbstractDoubleProblem;
 import org.uma.jmetal.problem.impl.AbstractIntegerDoubleProblem;
 import org.uma.jmetal.problem.impl.AbstractIntegerProblem;
 import org.uma.jmetal.solution.Solution;
-import org.uma.jmetal.util.comparator.ObjectiveComparator;
 import org.uma.jmetal.util.point.Point;
 import org.uma.jmetal.util.point.impl.ArrayPoint;
 import org.uma.jmetal.util.point.util.distance.EuclideanDistance;
@@ -23,7 +22,7 @@ import org.uma.jmetal.util.referencePoint.ReferencePoint;
 import org.uma.jmetal.util.referencePoint.impl.IdealPoint;
 import org.uma.jmetal.util.referencePoint.impl.NadirPoint;
 
-public class ARPSingle<S extends Solution<?>> extends  AutomaticReferencePoint<S,S> {
+public class ARPSingle<S extends Solution<?>> extends ArtificialDecisionMaker<S,S> {
 
   protected IdealPoint idealOjectiveVector = null;
   protected NadirPoint nadirObjectiveVector = null;

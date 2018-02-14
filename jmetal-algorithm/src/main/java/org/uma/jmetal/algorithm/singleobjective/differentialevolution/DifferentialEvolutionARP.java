@@ -1,18 +1,13 @@
 package org.uma.jmetal.algorithm.singleobjective.differentialevolution;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import org.uma.jmetal.algorithm.InteractiveAlgorithm;
-import org.uma.jmetal.algorithm.impl.AbstractDifferentialEvolution;
-import org.uma.jmetal.algorithm.multiobjective.arp.AutomaticReferencePoint;
 import org.uma.jmetal.operator.impl.crossover.DifferentialEvolutionCrossover;
 import org.uma.jmetal.operator.impl.selection.DifferentialEvolutionSelection;
 import org.uma.jmetal.problem.DoubleProblem;
 import org.uma.jmetal.problem.singleobjective.ACH;
 import org.uma.jmetal.solution.DoubleSolution;
-import org.uma.jmetal.util.comparator.ObjectiveComparator;
 import org.uma.jmetal.util.evaluator.SolutionListEvaluator;
 import org.uma.jmetal.util.referencePoint.ReferencePoint;
 

@@ -22,8 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.InteractiveAlgorithm;
-import org.uma.jmetal.algorithm.multiobjective.arp.ArtificialDecisionMakerPSO;
-import org.uma.jmetal.algorithm.multiobjective.arp.ArtificialDecisionMakerPSOBuilder;
+import org.uma.jmetal.algorithm.multiobjective.adm.ArtificialDecisionMakerPSO;
+import org.uma.jmetal.algorithm.multiobjective.adm.ArtificialDecisionMakerPSOBuilder;
 import org.uma.jmetal.algorithm.multiobjective.rnsgaii.RNSGAIIBuilder;
 import org.uma.jmetal.algorithm.multiobjective.wasfga.WASFGA;
 import org.uma.jmetal.operator.CrossoverOperator;
@@ -33,7 +33,6 @@ import org.uma.jmetal.operator.impl.crossover.SBXCrossover;
 import org.uma.jmetal.operator.impl.mutation.PolynomialMutation;
 import org.uma.jmetal.operator.impl.selection.BinaryTournamentSelection;
 import org.uma.jmetal.problem.Problem;
-import org.uma.jmetal.problem.impl.AbstractDoubleProblem;
 import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ1;
 import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ2;
 import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ3;
@@ -292,7 +291,7 @@ public class ARPPSORunner extends AbstractAlgorithmRunner {
       double epsilon = 0.0045;
       List<Double> asp = new ArrayList<>();
       for (int i = 0; i < problem.getNumberOfObjectives(); i++) {
-         double value=JMetalRandom.getInstance().nextDouble(((AbstractDoubleProblem)problem).getLowerBound(i),((AbstractDoubleProblem)problem).getUpperBound(i));
+        // double value=JMetalRandom.getInstance().nextDouble(((AbstractDoubleProblem)problem).getLowerBound(i),((AbstractDoubleProblem)problem).getUpperBound(i));
         // System.out.println(value);
        // asp.add(value);
         asp.add(0.0);
