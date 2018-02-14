@@ -34,10 +34,8 @@ public class DecisionTreeEstimator<S extends Solution<?>> {
       //Attributes
       //numeric
       Attribute attr = new Attribute("my-numeric");
-      //System.out.println(attr.isNumeric());
 
       //nominal
-      //FastVector myNomVals = new FastVector();
       ArrayList<String> myNomVals = new ArrayList<>();
 
       for (int i=0; i<numberOfObjectives; i++)
@@ -109,9 +107,7 @@ public class DecisionTreeEstimator<S extends Solution<?>> {
       //do eval
       Evaluation eval = new Evaluation(datasetTest); //trainset
       eval.evaluateModel(classifier, datasetTest); //testset
-      //System.out.println(classifier.classifyInstance(dataSetTest.get(index)));
       result = classifier.classifyInstance(datasetTest.get(index));
-    //  System.out.println(dataset.attribute(dataset.classIndex()).value((int)dataSetTest.get(index).classValue()));
     } catch (Exception e) {
       result = testSolution.getObjective(index);
     }
@@ -127,20 +123,16 @@ public class DecisionTreeEstimator<S extends Solution<?>> {
       //Attributes
       //numeric
       Attribute attr = new Attribute("my-numeric");
-      //System.out.println(attr.isNumeric());
 
       //nominal
-      //FastVector myNomVals = new FastVector();
       ArrayList<String> myNomVals = new ArrayList<>();
 
       for (int i=0; i<numberOfVariables; i++)
         myNomVals.add("value_"+i);
       Attribute attr1 = new Attribute("my-nominal", myNomVals);
-      //System.out.println(attr1.isNominal());
 
       //string
       Attribute attr2 = new Attribute("my-string", (List)null);
-      //System.out.println(attr2.isString());
 
       //2.create dataset
       ArrayList<Attribute> attrs = new ArrayList<>();
@@ -202,9 +194,7 @@ public class DecisionTreeEstimator<S extends Solution<?>> {
       //do eval
       Evaluation eval = new Evaluation(datasetTest); //trainset
       eval.evaluateModel(classifier, datasetTest); //testset
-      //System.out.println(classifier.classifyInstance(dataSetTest.get(index)));
       result = classifier.classifyInstance(datasetTest.get(index));
-      //  System.out.println(dataset.attribute(dataset.classIndex()).value((int)dataSetTest.get(index).classValue()));
     } catch (Exception e) {
       result = ((DoubleSolution)testSolution).getVariableValue(index);
     }
