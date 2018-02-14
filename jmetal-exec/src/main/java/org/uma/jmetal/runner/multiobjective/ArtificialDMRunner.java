@@ -13,20 +13,13 @@
 
 package org.uma.jmetal.runner.multiobjective;
 
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.InteractiveAlgorithm;
-import org.uma.jmetal.algorithm.multiobjective.adm.ARP;
-import org.uma.jmetal.algorithm.multiobjective.adm.ARPBuilder;
 import org.uma.jmetal.algorithm.multiobjective.adm.ArtificialDM;
 import org.uma.jmetal.algorithm.multiobjective.adm.ArtificialDMBuilder;
-import org.uma.jmetal.algorithm.multiobjective.rnsgaii.RNSGAIIBuilder;
 import org.uma.jmetal.algorithm.multiobjective.wasfga.WASFGA;
 import org.uma.jmetal.operator.CrossoverOperator;
 import org.uma.jmetal.operator.MutationOperator;
@@ -36,12 +29,6 @@ import org.uma.jmetal.operator.impl.mutation.PolynomialMutation;
 import org.uma.jmetal.operator.impl.selection.BinaryTournamentSelection;
 import org.uma.jmetal.problem.Problem;
 import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ1;
-import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ2;
-import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ3;
-import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ4;
-import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ5;
-import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ6;
-import org.uma.jmetal.problem.multiobjective.dtlz.DTLZ7;
 import org.uma.jmetal.runner.AbstractAlgorithmRunner;
 import org.uma.jmetal.solution.DoubleSolution;
 import org.uma.jmetal.util.AlgorithmRunner;
@@ -57,7 +44,7 @@ import org.uma.jmetal.util.referencePoint.impl.IdealPoint;
 import org.uma.jmetal.util.referencePoint.impl.NadirPoint;
 
 /**
- * Class to configure and run the R-NSGA-II algorithm
+ * Class to configure and run the Artificial Decision Making algorithm
  *
  * @author Antonio J. Nebro <antonio@lcc.uma.es>
  * @author Cristobal Barba <cbarba@lcc.uma.es>
@@ -68,7 +55,7 @@ public class ArtificialDMRunner extends AbstractAlgorithmRunner {
    * @throws JMetalException
    * @throws FileNotFoundException
    * Invoking command:
-    java org.uma.jmetal.runner.multiobjective.RNSGAIIRunner_Ant problemName [referenceFront]
+
    */
   public static void main(String[] args) throws JMetalException, FileNotFoundException {
     Problem<DoubleSolution> problem;
