@@ -293,7 +293,7 @@ public abstract class AbstractMOEAD<S extends Solution<?>> implements Algorithm<
     }
   }
 
-  double fitnessFunction(S individual, double[] lambda) throws JMetalException {
+  protected double fitnessFunction(S individual, double[] lambda) throws JMetalException {
     double fitness;
 
     if (MOEAD.FunctionType.TCHE.equals(functionType)) {
